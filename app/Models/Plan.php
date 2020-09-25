@@ -19,4 +19,9 @@ class Plan extends Model
             ->orWhere('description', 'LIKE', "%{$filter}%")
             ->paginate(10);
     }
+
+    public function details()
+    {
+        return $this->hasMany(DetailPlan::class);
+    }
 }

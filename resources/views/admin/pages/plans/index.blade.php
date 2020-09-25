@@ -28,7 +28,7 @@
                     <tr>
                         <th>Nome</th>
                         <th>Preco</th>
-                        <th width="100">Acões</th>
+                        <th width="250">Acões</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,6 +41,7 @@
                                 R$ {{ number_format($plan->price, 2, ',', '.') }}
                             </td>
                             <td>
+                                <a class="btn btn-primary" href="{{ route('details.plan.index', $plan->url) }}">Detalhes</a>
                                 <a class="btn btn-info" href="{{ route('plans.edit', $plan->url) }}">Edit</a>
                                 <a class="btn btn-warning" href="{{ route('plans.show', $plan->url) }}">Ver</a>
                             </td>
